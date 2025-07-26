@@ -139,7 +139,7 @@ export default {
         //Post-anrop som registrerar ny användare
         async registerUser(name, email, password) {
             //Post request under uppbyggnad
-            await axios.post('https://dg-gross-1050979898493.europe-north1.run.app/user/register', {
+            await axios.post('https://nest-js-discgolf-grossisten.onrender.com/user/register', {
                 "name": name,
                 "email": email,
                 "password": password
