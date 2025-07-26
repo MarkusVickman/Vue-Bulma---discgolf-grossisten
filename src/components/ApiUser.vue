@@ -36,7 +36,7 @@ export default {
             try {
                 const token = sessionStorage.getItem('access_token');
                 const headers = { 'Authorization': `Bearer ${token}` };
-                let response = await axios.get(`https://dg-gross-1050979898493.europe-north1.run.app/auth/profile`, {
+                let response = await axios.get(`https://nest-js-discgolf-grossisten.onrender.com/auth/profile`, {
                     headers: headers
                 })
 
@@ -69,7 +69,7 @@ export default {
 
             const token = sessionStorage.getItem('access_token');
             const headers = { 'Authorization': `Bearer ${token}` };
-            await axios.get(`https://dg-gross-1050979898493.europe-north1.run.app/user/`, {
+            await axios.get(`https://nest-js-discgolf-grossisten.onrender.com/user/`, {
                 headers: headers
             })
                 .then((response) => {
@@ -87,7 +87,7 @@ export default {
         async getOneUser(email, callback) {
             const token = sessionStorage.getItem('access_token');
             const headers = { 'Authorization': `Bearer ${token}` };
-            await axios.get(`https://dg-gross-1050979898493.europe-north1.run.app/user/${email}`, {
+            await axios.get(`https://nest-js-discgolf-grossisten.onrender.com/user/${email}`, {
                 headers: headers
             })
                 .then((response) => {
@@ -107,7 +107,7 @@ export default {
         async editUser(newEmail, email, name, isVerified, isAdmin, password, callback) {
             const token = sessionStorage.getItem('access_token');
             const headers = { 'Authorization': `Bearer ${token}` };
-            await axios.put(`https://dg-gross-1050979898493.europe-north1.run.app/user/${email}`, {
+            await axios.put(`https://nest-js-discgolf-grossisten.onrender.com/user/${email}`, {
                 email: newEmail,
                 name: name,
                 isVerified: isVerified,
@@ -131,7 +131,7 @@ export default {
         deleteUser(email) {
             const token = sessionStorage.getItem('access_token');
             const headers = { 'Authorization': `Bearer ${token}` };
-            axios.delete(`https://dg-gross-1050979898493.europe-north1.run.app/user/${email}`, {
+            axios.delete(`https://nest-js-discgolf-grossisten.onrender.com/user/${email}`, {
                 headers: headers
             })
                 .then((response) => {
