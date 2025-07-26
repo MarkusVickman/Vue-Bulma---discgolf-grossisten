@@ -132,7 +132,7 @@ export default {
         //Post-anrop som logga in användare
         loginUser(email, password) {
             //Post request under uppbyggnad
-            axios.post('https://dg-gross-1050979898493.europe-north1.run.app/auth/login', {
+            axios.post('https://nest-js-discgolf-grossisten.onrender.com/auth/login', {
 
                 "email": email,
                 "password": password
