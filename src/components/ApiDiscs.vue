@@ -30,7 +30,7 @@ export default {
 
         //Hämtar alla inlägg från api med en callback
         async getAll(callback) {
-            await axios.get('https://dg-gross-1050979898493.europe-north1.run.app/disc')
+            await axios.get('https://nest-js-discgolf-grossisten.onrender.com/disc')
                 .then((response) => {
                     this.discData = response.data;
                     callback('');
@@ -46,7 +46,7 @@ export default {
         async discGet(id, callback) {
             const token = sessionStorage.getItem('access_token');
             const headers = { 'Authorization': `Bearer ${token}` };
-            await axios.get(`https://dg-gross-1050979898493.europe-north1.run.app/disc/${id}`, {
+            await axios.get(`https://nest-js-discgolf-grossisten.onrender.com/disc/${id}`, {
                 headers: headers
             })
                 .then((response) => {
@@ -65,7 +65,7 @@ export default {
         AddDisc(brand, model, version, plastic, amount, description, type, price, flightstats, callback) {
             const token = sessionStorage.getItem('access_token');
             const headers = { 'Authorization': `Bearer ${token}` };
-            axios.post(`https://dg-gross-1050979898493.europe-north1.run.app/disc/create`, {
+            axios.post(`https://nest-js-discgolf-grossisten.onrender.com/disc/create`, {
                 brand: brand,
                 model: model,
                 version: version,
@@ -94,7 +94,7 @@ export default {
         updateDiscs(id, amount, brand, model, version, plastic, description, type, price, flightstats) {
             const token = sessionStorage.getItem('access_token');
             const headers = { 'Authorization': `Bearer ${token}` };
-            axios.put(`https://dg-gross-1050979898493.europe-north1.run.app/disc/update/${id}`, {
+            axios.put(`https://nest-js-discgolf-grossisten.onrender.com/disc/update/${id}`, {
                 brand: brand,
                 model: model,
                 version: version,
@@ -128,7 +128,7 @@ export default {
         DiscDelete(id) {
             const token = sessionStorage.getItem('access_token');
             const headers = { 'Authorization': `Bearer ${token}` };
-            axios.delete(`https://dg-gross-1050979898493.europe-north1.run.app/disc/delete/${id}`, {
+            axios.delete(`https://nest-js-discgolf-grossisten.onrender.com/disc/delete/${id}`, {
                 headers: headers
             })
                 .then((response) => {
