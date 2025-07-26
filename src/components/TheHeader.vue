@@ -146,7 +146,7 @@ export default {
         async CheckToken() {
             const token = sessionStorage.getItem('access_token');
             const headers = { 'Authorization': `Bearer ${token}` };
-            await axios.get('https://dg-gross-1050979898493.europe-north1.run.app/auth/profile', {
+            await axios.get('https://nest-js-discgolf-grossisten.onrender.com/auth/profile', {
                 headers: headers
             })
                 .then((response) => {
